@@ -1,13 +1,11 @@
 import React, { Component } from 'react'
-import Header from './components/Header'
-import Categories from './components/categories/Categories'
+import Categories from './components/Categories'
 import './App.css'
 
 class App extends Component {
   render() {
     return (
       <div>
-        <Header />
         <Categories />
       </div>
     )

@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import sprite from '../../images/sprite.png'
+import sprite from '../images/sprite.png'
 
 const CategoryName = styled.a`
   font-size: 14px;
@@ -23,20 +23,21 @@ const CategoryIcon = styled.div`
   height: 20px;
   width: 20px;
   background-image: url(${sprite});
-  background-position: 0 -40px;
+  background-position: ${props =>
+    props.hasSubCategory ? '0 -40px' : '0 -60px'};
   background-size: 20px;
 `
 
 class Category extends React.Component {
   handleClick = () => {
-    this.props.changeCategories(this.props.sub)
+    this.props.changeCategories(this.props.categoryId)
   }
 
   render() {
-    const { className, name, url, count, sub } = this.props
+    const { className, name, url, count, sub, categoryId } = this.props
     return (
       <div className={className}>
-        <CategoryIcon />
+        <CategoryIcon hasSubCategory={sub !== null} />
         <CategoryName onClick={this.handleClick}>{name}</CategoryName>
         <CategoryCount>{count}</CategoryCount>
       </div>
