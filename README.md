@@ -1,6 +1,6 @@
 # BL Test
 
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
+This is unfinished version. For finished version, go to `finished` branch. Bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 ## Usage
 
